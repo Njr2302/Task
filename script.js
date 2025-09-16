@@ -6,7 +6,7 @@ let portfolioData = {
         {
             id: 1,
             title: "Introduction to HTML",
-            image: "Task/1.png",
+            image: "1.png",
             objectives: [
                 "Creating forms with form, input, textarea, select",
                 "Document structure - DOCTYPE, head, meta tags",
@@ -20,7 +20,7 @@ let portfolioData = {
         {
             id: 2,
             title: "Introduction to CSS",
-            image: "Task/2.png",
+            image: "2.png",
             objectives: [
                 "CSS syntax and selectors",
                 "Inline, internal, and external styles",
@@ -34,7 +34,7 @@ let portfolioData = {
         {
             id: 3,
             title: "CSS Layouts",
-            image: "Task/3.png",
+            image: "3.png",
             objectives: [
                 "Positioning: static, relative, absolute, fixed",
                 "Floating elements and clearing",
@@ -62,7 +62,7 @@ let portfolioData = {
         {
             id: 5,
             title: "Bootstrap Basics",
-            image: "Task/5.png",
+            image: "5.png",
             objectives: [
                 "Bootstrap setup and grid system - containers, rows, columns",
                 "Typography, forms, buttons, alerts, and cards",
@@ -450,5 +450,6 @@ window.portfolio = {
     loadFromStorage,
     scrollToProjects
 };
+
 
 

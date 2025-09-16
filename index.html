@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neeraj S R Portfolio | Frontend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h2>NJR Portfolio</h2>
+            <nav id="nav-links"></nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="hero-name">Neeraj S R</h1>
+            <h2 class="hero-role">UI/UX Intern</h2>
+            <p class="hero-description">Currenty working as a UI/UX Intern in  PQSI Digital</p>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-info">
+                        <span class="contact-label">EMAIL</span>
+                        <span class="contact-value">srneeraj23@gmail.com</span>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-info">
+                        <span class="contact-label">PHONE</span>
+                        <span class="contact-value">+91-8072362971</span>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">⚡</div>
+                    <div class="contact-info">
+                        <span class="contact-label">GITHUB</span>
+                        <span class="contact-value">https://github.com/Njr2302</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn" onclick="scrollToProjects()">View My Learning Journey</button>
+        </div>
+    </section>
+
+    <main class="main">
+        <aside class="sidebar">
+            <div class="section">
+                <h3>Learning Timeline</h3>
+                <nav id="task-nav" class="nav-tasks"></nav>
+            </div>
+
+            <div class="section">
+                <h3>Add New Project</h3>
+                <button id="add-project-btn" class="add-btn">+ Add Project</button>
+                
+                <form id="add-project-form" class="project-form" style="display:none">
+                    <div class="form-group">
+                        <label>Project Title</label>
+                        <input type="text" id="project-title" placeholder="e.g., React Components" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Learning Objectives (one per line)</label>
+                        <textarea id="project-objectives" rows="4" placeholder="Component lifecycle - mounting and updating&#10;Props and state - data management&#10;Hooks usage - useState and useEffect" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Project Description</label>
+                        <textarea id="project-description" rows="3" placeholder="Built a React application with multiple components..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Skills (comma separated)</label>
+                        <input type="text" id="project-skills" placeholder="React, JavaScript, CSS, Components" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Image URL (optional)</label>
+                        <input type="url" id="project-image" placeholder="images/day8-screenshot.jpg">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Documentation Link (optional)</label>
+                        <input type="url" id="project-doc" placeholder="https://github.com/user/project">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Demo Link (optional)</label>
+                        <input type="url" id="project-demo" placeholder="https://my-project.netlify.app">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-save">Save Project</button>
+                        <button type="button" id="cancel-project" class="btn-cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="section">
+                <h3>Progress</h3>
+                <div class="progress">
+                    <div class="stats">
+                        <div><span id="completed">0</span><small>Completed</small></div>
+                        <div><span id="total">0</span><small>Total</small></div>
+                    </div>
+                    <div class="bar">
+                        <div class="fill" id="progress-bar"></div>
+                    </div>
+                    <span class="percent" id="progress-text">0% Complete</span>
+                </div>
+
+                <div class="calendar">
+                    <h4 id="calendar-month">Loading...</h4>
+                    <div class="days" id="calendar-days"></div>
+                    <div class="legend">
+                        <div><span class="dot done"></span>Done</div>
+                        <div><span class="dot current"></span>Today</div>
+                        <div><span class="dot next"></span>Next</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="content" id="projects">
+            <div id="content-area">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#tasks">Learning Journey</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Me</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/Njr2302" target="_blank">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/neeraj-s-r/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
+                        <li><a href="#" target="_blank">Portfolio Website</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Find Me</h3>
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15552.497293601687!2d80.23884875655139!3d12.963895597610414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d0067d5751f%3A0x92dd98c1bf3a7c11!2sPQSI%20DIGITAL%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1758018836264!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 NEERAJ'S PORTFOLIO | Built with HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+</body>
+</html>
